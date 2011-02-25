@@ -16,6 +16,7 @@ public class Program3 {
 
 		boolean cont = true;
 		while(cont){
+			//Se dio un espacio
 			System.out.println("Su juego actual es: ");
 			juego.getMano(1).print();
 
