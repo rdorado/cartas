@@ -1,12 +1,20 @@
 package org.rdorado.cartas;
 
+import java.util.Set;
 
 public class DeckBuilder {
 	
 	Deck currentDeck = new Deck();
 
 	public Deck build() {
-		return null;
+		Deck newDeck = new Deck(currentDeck);
+		
+		Set<String> keys = newDeck.groups.keySet();
+		for(String key: keys){
+			System.out.println("Value of "+key+" is: "+newDeck.groups.get(key));
+		}
+				
+		return newDeck;
 	}
 
 	public void addClass(String name, String... cards) {

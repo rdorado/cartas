@@ -1,11 +1,21 @@
 package org.rdorado.cartas;
 
 import java.util.Hashtable;
+import java.util.Set;
 
 public class CardGroup {
 
 	Hashtable<String, Integer> cardQuantity = new Hashtable<String, Integer>();
 	
+	public CardGroup(){ }
+	
+	public CardGroup(CardGroup cardGroup) {
+		Set<String> keys = cardGroup.cardQuantity.keySet();
+		for(String key: keys){
+			cardQuantity.put(key, new Integer(cardGroup.cardQuantity.get(key)));
+		}	
+	}
+
 	public void addCard(String cardstr) {
 		String cardname = cardstr;
 		int quantity = 1;

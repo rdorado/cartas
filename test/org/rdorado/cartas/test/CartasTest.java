@@ -11,8 +11,8 @@ public class CartasTest {
 		builder.addClass("Hearts","A","2","3","4","5","6","7","8","9","10","J","Q","K");
 		builder.addCard("Joker:2");
 		
-		Deck deck1 = builder.build();
-
+		Deck deck1 = builder.build();		
+		
 		deck1.shuffle();
 		
 		Card c1 = deck1.getNext();
